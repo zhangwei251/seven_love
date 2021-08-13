@@ -1,0 +1,685 @@
+body,div,ul,li,button {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+#content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -225px;
+    margin-left: -360px;
+    width: 720px;
+    height: 446px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+.content_wrap {
+    position: relative;
+}
+.content_wrap > li {
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+.boy_wrap {
+    position: absolute;
+    left: 6%;
+    top: 45%;
+    width: 10.48%;
+    height: 32.23%;
+    background: url("../images/person/boy-slow-walk.png") no-repeat;
+    background-size: 400% 100%;
+    z-index: 2;
+}
+/*背景样式*/
+.a_bg,.b_bg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.a_bg_top,.c_bg_top {
+    width: 100%;
+    height: 71.66%;
+}
+.a_bg_top {
+    background: url("../images/background/a_bg_top.png") no-repeat;
+    background-size: 100%;
+}
+.c_bg_top {
+    background: url("../images/background/c_bg_top.png") no-repeat;
+    background-size: 100%;
+}
+.a_bg_middle,.c_bg_middle {
+    width: 100%;
+    height: 12.88%;
+}
+.a_bg_middle {
+    background: url("../images/background/a_bg_middle.png") no-repeat;
+    background-size: 100%;
+}
+.c_bg_middle {
+    background: url("../images/background/c_bg_middle.png") no-repeat;
+    background-size: 100%;
+}
+.a_bg_bottom,.c_bg_bottom {
+    width: 100%;
+    height: 15.46%;
+}
+.a_bg_bottom {
+    background: url("../images/background/a_bg_bottom.png") no-repeat;
+    background-size: 100%;
+}
+.c_bg_bottom {
+    background: url("../images/background/c_bg_bottom.png") no-repeat;
+    background-size: 100%;
+}
+.b_bg {
+    background: url("../images/background/b_bg.png") no-repeat;
+    background-size: 100%;
+}
+.button {
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    margin-left: -10%;
+    height: 10%;
+    width: 20%;
+    text-align: center;
+}
+.button > button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 10%;
+    background: #f8806e;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 900;
+}
+/*boy慢走动画*/
+.slowWalk {
+    -webkit-animation-name: boy-slow-walk;
+    -webkit-animation-duration: 950ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: steps(1, start);
+    -moz-animation-name: boy-slow-walk;
+    -moz-animation-duration: 950ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: steps(1, start)
+}
+@-webkit-keyframes boy-slow-walk {
+    0% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 33.33% 0;
+    }
+    50% {
+        background-position: 66.66% 0;
+    }
+    75% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+@-moz-keyframes boy-slow-walk {
+    0% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 33.33% 0;
+    }
+    50% {
+        background-position: 66.66% 0;
+    }
+    75% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+/*动画暂停样式*/.pauseWalk {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    animation-play-state: paused;
+}
+/*pageA css*/
+/*太阳公转动画*/
+#sun {
+    background: url("../images/sun.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    right: 40%;
+    height: 22.33%;
+    width: 13.96%;
+}
+.sunRotation {
+    -webkit-animation-name: sunRotation;
+    -webkit-animation-duration: 60s;
+    -moz-animation-name: sunRotation;
+    -moz-animation-duration: 60s;
+}
+@-webkit-keyframes sunRotation {
+    0% {
+        top: 0;
+        right: 40%;
+    }
+    100% {
+        top: 40%;
+        right: 300%;
+    }
+}
+@-moz-keyframes sunRotation {
+    0% {
+        top: 0;
+        right: 40%;
+    }
+    100% {
+        top: 40%;
+        right: 200%;
+    }
+}
+/*云飘动动画*/
+.cloud_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    overflow: hidden;
+}
+#cloud1 {
+     position: absolute;
+     width: 12.59%;
+     height: 37.41%;
+     left: -5%;
+     top: 40%;
+     background: url("../images/cloud1.png") no-repeat;
+    background-size: 100%;
+ }
+#cloud2 {
+    position: absolute;
+    width: 20.90%;
+    height: 51.85%;
+    right: -5%;
+    top: 10%;
+    background: url("../images/cloud2.png") no-repeat;
+    background-size: 100%;
+}
+.cloud1-animation{
+    -webkit-animation-name: smallCloud;
+    -webkit-animation-duration: 30s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: smallCloud;
+    -moz-animation-duration: 30s;
+    -moz-animation-iteration-count: infinite;
+}
+.cloud2-animation{
+    -webkit-animation-name: largeCloud;
+    -webkit-animation-duration: 30s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: largeCloud;
+    -moz-animation-duration: 30s;
+    -moz-animation-iteration-count: infinite;
+}
+@-webkit-keyframes smallCloud {
+    0% {
+        left: -5%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+@-moz-keyframes smallCloud {
+    0% {
+        left: -5%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+@-webkit-keyframes largeCloud {
+    0% {
+        right: -5%;
+    }
+    100% {
+        right: 100%;
+    }
+}
+@-moz-keyframes largeCloud {
+    0% {
+        right: -5%;
+    }
+    100% {
+        right: 100%;
+    }
+}
+/*pageB css*/
+/*门*/
+.shop {
+    position: absolute;
+    top: 48.22%;
+    left: 51.94%;
+    width: 12.64%;
+    height: 23.56%;
+    overflow: hidden;
+}
+.door {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.door_left,.door_right {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+.door_left {
+    left: 0;
+    background: url("../images/door-left.png") no-repeat;
+    background-size: 100%;
+}
+.door_right {
+    left: 50%;
+    background: url("../images/door-right.png") no-repeat;
+    background-size: 100%;
+}
+/*灯*/
+.lamp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+.lamp_bright {
+    background: transparent;
+}
+/*小男孩拿花走动画*/
+.takeFlowerWalk {
+    background: url("../images/person/boy-take-flower-walk.png") no-repeat;
+    background-size: 400% 100%;
+    -webkit-animation-name: takeFlowerWalk;
+    -webkit-animation-duration: 950ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: steps(1, start);
+    -moz-animation-name: takeFlowerWalk;
+    -moz-animation-duration: 950ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: steps(1, start)
+}
+@-webkit-keyframes takeFlowerWalk {
+    0% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 33.33% 0;
+    }
+    50% {
+        background-position: 66.66% 0;
+    }
+    75% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+@-moz-keyframes takeFlowerWalk {
+    0% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 33.33% 0;
+    }
+    50% {
+        background-position: 66.66% 0;
+    }
+    75% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+/*飞鸟动画*/
+.bird {
+    position: absolute;
+    right: -5%;
+    top: 10%;
+    width: 6.32%;
+    height: 7.89%;
+    background: url("../images/bird.png") no-repeat;
+    background-size: 300% 100%;
+}
+.birdFly {
+    -webkit-animation-name: birdFly;
+    -webkit-animation-duration: 950ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: steps(1, start);
+    -moz-animation-name: birdFly;
+    -moz-animation-duration: 950ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: steps(1, start)
+}
+@-webkit-keyframes birdFly {
+    0% { background-position: 0 0; }
+    50% {background-position: 50% 0;}
+    75% {background-position: 100% 0;}
+    100% {background-position: 0 0;}
+}
+@-moz-keyframes birdFly {
+    0% { background-position: 0 0; }
+    50% {background-position: 50% 0;}
+    75% {background-position: 100% 0;}
+    100% {background-position: 0 0;}
+}
+/*pageC css*/
+/*女孩转身动画*/
+.girl {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 10.48%;
+    height: 32.23%;
+    background: url("../images/person/girl.png") no-repeat;
+    background-size: 600% 100%;
+}
+.girlTurnAround {
+    -webkit-animation-name: girlTurnAround;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: steps(1, start);
+    -webkit-animation-iteration-count: 1;
+    /*保留在最终状态*/
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: girlTurnAround;
+    -moz-animation-duration: 2s;
+    -moz-animation-timing-function: steps(1, start);
+    -moz-animation-iteration-count: 1;
+    -moz-animation-fill-mode: forwards;
+}
+@-webkit-keyframes girlTurnAround {
+    0% {
+        background-position: 0 0;
+    }
+    20% {
+        background-position: 20% 0;
+    }
+    40% {
+        background-position: 40% 0;
+    }
+    60% {
+        background-position: 60% 0;
+    }
+    80% {
+        background-position: 80% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+@-moz-keyframes girlTurnAround {
+    0% {
+        background-position: 0 0;
+    }
+    20% {
+        background-position: 20% 0;
+    }
+    40% {
+        background-position: 40% 0;
+    }
+    60% {
+        background-position: 60% 0;
+    }
+    80% {
+        background-position: 80% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+.boyTakeFlowerStop {
+    background: url("../images/person/boy-turn-around.png") no-repeat;
+    background-size: 600% 100%;
+}
+/*boy转身动画*/
+.boyTurnAround {
+    -webkit-animation-name: boyTurnAround;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: steps(1, start);
+    /*保留在最终状态*/
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: boyTurnAround;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: steps(1, start);
+    -moz-animation-fill-mode: forwards;
+}
+@-webkit-keyframes boyTurnAround {
+    0% {
+        background-position: 0 0;
+    }
+    20% {
+        background-position: 20% 0;
+    }
+    40% {
+        background-position: 40% 0;
+    }
+    60% {
+        background-position: 60% 0;
+    }
+    80% {
+        background-position: 80% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+@-moz-keyframes boyTurnAround {
+    0% {
+        background-position: 0 0;
+    }
+    20% {
+        background-position: 20% 0;
+    }
+    40% {
+        background-position: 40% 0;
+    }
+    60% {
+        background-position: 60% 0;
+    }
+    80% {
+        background-position: 80% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+/*桥下水波动*/
+.bridge-bottom {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.waters {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    margin-left: -25%;
+    width: 50%;
+    height: 30%;
+}
+.waters > li {
+    position: absolute;
+}
+.water1 {
+    left: 35%;
+    top: 30%;
+    width: 18.06%;
+    height: 5.19%;
+    background: url("../images/water1.png") no-repeat;
+    background-size: 100%;
+}
+.water2 {
+    left: 50%;
+    top: 40%;
+    width: 22.22%;
+    height: 2.96%;
+    background: url("../images/water2.png") no-repeat;
+    background-size: 100%;
+}
+.water3 {
+    left: 20%;
+    top: 60%;
+    width: 36.11%;
+    height: 10%;
+    background: url("../images/water3.png") no-repeat;
+    background-size: 100%;
+}
+.water4 {
+    left: 40%;
+    top: 80%;
+    width: 41.94%;
+    height: 4.44%;
+    background: url("../images/water4.png") no-repeat;
+    background-size: 100%;
+}
+.waterWave {
+    -webkit-animation-name: waterWave;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: waterWave;
+    -moz-animation-duration: 6s;
+    -moz-animation-iteration-count: infinite;
+}
+@-webkit-keyframes waterWave {
+    0% {
+        transform: translateX(-5%);
+    }
+    50% {
+        transform: translateX(5%);
+    }
+    100% {
+        transform: translateX(-5%);
+    }
+}
+@-moz-keyframes waterWave {
+    0% {
+        transform: translateX(-5%);
+    }
+    50% {
+        transform: translateX(5%);
+    }
+    100% {
+        transform: translateX(-5%);
+    }
+}
+/*星星闪动*/
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+}
+.stars>li {
+    position: absolute;
+    width: 2.08%;
+    height: 6.67%;
+    background: url("../images/stars.png") no-repeat;
+    background-size: 100%;
+}
+.star1 {
+    top: 30%;
+    left: 30%;
+}
+.star2 {
+    top: 40%;
+    left: 20%;
+}
+.star3 {
+    top: 70%;
+    left: 15%;
+}
+.star4 {
+    top: 60%;
+    left: 85%;
+}
+.star5 {
+    top: 20%;
+    left: 75%;
+}
+.star6 {
+    top: 50%;
+    left: 70%;
+}
+.starTwinkle {
+    -webkit-animation-name: starTwinkle;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: starTwinkle;
+    -moz-animation-duration: 5s;
+    -moz-animation-iteration-count: infinite;
+}
+@-webkit-keyframes starTwinkle {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+@-moz-keyframes starTwinkle {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+#flower_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/*花瓣旋转*/
+.flowerRotate {
+    -webkit-animation-name: flowerRotate;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: flowerRotate;
+    -moz-animation-duration: 6s;
+    -moz-animation-iteration-count: infinite;
+}
+@-webkit-keyframes flowerRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg);}
+}
+@-moz-keyframes flowerRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg);}
+}
